@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">qNote</string>
     <string name="copy">2021 v 1.02</string>
+    <string name="mail_example">mail@example.ua</string>
+    <string name="pass">********</string>
+    <string name="forgot_pass">Забули пароль?</string>
+    <string name="log_in">Увійти</string>
+    <string name="sign_in_apple">Sign in with Apple</string>
+    <string name="sign_in_google">Sign in with Google</string>
 </resources>

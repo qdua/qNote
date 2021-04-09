@@ -5,15 +5,113 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".LoginActivity"
+    android:background="@drawable/gradient">
 
-  <TextView
-      android:id="@+id/textView"
+
+  <ImageView
+      android:id="@+id/logo"
       android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="TextView"
-      app:layout_constraintBottom_toBottomOf="parent"
+      android:layout_height="80dp"
+      android:contentDescription="@string/app_name"
+      app:layout_constraintBottom_toTopOf="@+id/form"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
+      app:layout_constraintTop_toTopOf="parent"
+      app:srcCompat="@drawable/ic_qnote_logo" />
+
+  <LinearLayout
+      android:id="@+id/form"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_marginTop="160dp"
+      android:background="@drawable/corner_tlr_white"
+      android:orientation="vertical"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:layout_editor_absoluteX="0dp">
+
+    <EditText
+        android:id="@+id/emailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/mail_example"
+        android:inputType="textEmailAddress"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:textSize="22sp"
+        tools:ignore="RtlSymmetry" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/pass"
+        android:inputType="textPassword"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:textSize="22sp"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/forgot_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/forgot_pass"
+        android:textAlignment="textEnd"
+        android:textColor="@color/purple"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/log_in"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button"
+        android:text="@string/log_in"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/sign_in_apple"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_apple"
+        android:text="@string/sign_in_apple"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/sign_in_google"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/button_google"
+        android:text="@string/sign_in_google"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+  </LinearLayout>
+
+  <TextView
+      android:id="@+id/copy"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="24dp"
+      android:text="@string/copy"
+      android:textAlignment="center"
+      android:textColor="@color/red"
+      android:textSize="16sp"
+      app:layout_constraintBottom_toBottomOf="@+id/form"
+      app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
